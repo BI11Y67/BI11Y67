@@ -26,13 +26,4 @@ I started coding as a **hobby**, and I love the challenge of bringing ideas to l
 
 ---
 
-## 🤝 Connect with Me
-
-| Platform | Link |
-| :--- | :--- |
-| **GitHub** | **[Your GitHub Profile Link]** |
-| **LinkedIn** | **[Your LinkedIn Profile Link (Optional)]** |
-
----
-
 ### **✨ Let's Build Something Cool!**
