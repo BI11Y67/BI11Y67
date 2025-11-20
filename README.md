@@ -1,16 +1,39 @@
-## Hi there 👋
+## 👋 Hello World! I'm [Your Name/Handle]
 
-<!--
-**BI11Y67/BI11Y67** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+A **self-taught** developer who codes for fun and passion! 🚀
 
-Here are some ideas to get you started:
+---
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## 🛠️ Skills and Technologies
+
+I'm currently focused on building a strong foundation in modern web development.
+
+### 🌐 Currently Learning
+* **JavaScript (JS):** Mastering the core language and its ecosystem.
+* **React:** Moving towards building interactive user interfaces.
+* **React Native:** Planning to explore cross-platform mobile development.
+
+### 💡 Future Plans
+I plan to expand my skills to include databases, backend frameworks, and more!
+
+---
+
+## 🌱 My Learning Journey
+
+I started coding as a **hobby**, and I love the challenge of bringing ideas to life through code. My approach is hands-on; I learn best by building projects.
+
+> "The best way to predict the future is to invent it."
+> - Alan Kay
+
+---
+
+## 🤝 Connect with Me
+
+| Platform | Link |
+| :--- | :--- |
+| **GitHub** | **[Your GitHub Profile Link]** |
+| **LinkedIn** | **[Your LinkedIn Profile Link (Optional)]** |
+
+---
+
+### **✨ Let's Build Something Cool!**
