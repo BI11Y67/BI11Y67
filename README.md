@@ -9,10 +9,16 @@
 <img src="https://streak-stats.demolab.com/?user=BI11Y67&theme=dark&hide_border=true" alt="GitHub streak stats" />
 
 <!-- Cards: committed SVGs from Actions (.github/workflows/update-readme-cards.yml). Public github-readme-stats.vercel.app is paused/unreliable—run that workflow once if images 404. -->
-<p>
-  <img width="49%" src="https://github.com/BI11Y67/BI11Y67/blob/main/profile/stats.svg" alt="GitHub stats" />
-  <img width="49%" src="https://github.com/BI11Y67/BI11Y67/blob/main/profile/top-langs.svg" alt="Top languages" />
-</p>
+<table align="center">
+  <tr>
+    <td valign="top" align="center">
+      <img width="400" src="https://github.com/BI11Y67/BI11Y67/blob/main/profile/stats.svg" alt="GitHub stats" />
+    </td>
+    <td valign="top" align="center">
+      <img width="400" src="https://github.com/BI11Y67/BI11Y67/blob/main/profile/top-langs.svg" alt="Top languages" />
+    </td>
+  </tr>
+</table>
 
 </div>
 
