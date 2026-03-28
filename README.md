@@ -10,8 +10,8 @@
 
 <!-- Cards: committed SVGs from Actions (.github/workflows/update-readme-cards.yml). Public github-readme-stats.vercel.app is paused/unreliable—run that workflow once if images 404. -->
 <p>
-  <img width="49%" src="./profile/stats.svg" alt="GitHub stats" />
-  <img width="49%" src="./profile/top-langs.svg" alt="Top languages" />
+  <img width="49%" src="https://github.com/BI11Y67/BI11Y67/blob/main/profile/stats.svg" alt="GitHub stats" />
+  <img width="49%" src="https://github.com/BI11Y67/BI11Y67/blob/main/profile/top-langs.svg" alt="Top languages" />
 </p>
 
 </div>
