@@ -8,9 +8,10 @@
 
 <img src="https://streak-stats.demolab.com/?user=BI11Y67&theme=dark&hide_border=true" alt="GitHub streak stats" />
 
+<!-- Cards: committed SVGs from Actions (.github/workflows/update-readme-cards.yml). Public github-readme-stats.vercel.app is paused/unreliable—run that workflow once if images 404. -->
 <p>
-  <img width="49%" src="https://github-readme-stats.vercel.app/api?username=BI11Y67&show_icons=true&theme=dark&hide_border=true" alt="GitHub stats" />
-  <img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=BI11Y67&layout=compact&theme=dark&hide_border=true&langs_count=6" alt="Top languages" />
+  <img width="49%" src="./profile/stats.svg" alt="GitHub stats" />
+  <img width="49%" src="./profile/top-langs.svg" alt="Top languages" />
 </p>
 
 </div>
