@@ -8,14 +8,14 @@
 
 <img src="https://streak-stats.demolab.com/?user=BI11Y67&theme=dark&hide_border=true" alt="GitHub streak stats" />
 
-<!-- Stats row: SVGs in profile/ come from Actions (.github/workflows/update-readme-cards.yml). Use raw.githubusercontent URLs in <img> (blob URLs serve HTML and break rendering). Re-run workflow to refresh. -->
+<!-- Stats row: cards built as SVG in Actions, exported to PNG for README (GitHub blocks many SVG <img> sources with "Invalid image source"). Sources: profile/*.svg; embeds: profile/*.png. Re-run workflow to refresh. -->
 <table align="center">
   <tr>
     <td valign="top" align="center">
-      <img width="400" src="https://raw.githubusercontent.com/BI11Y67/BI11Y67/main/profile/stats.svg" alt="GitHub stats" />
+      <img width="400" src="https://raw.githubusercontent.com/BI11Y67/BI11Y67/main/profile/stats.png" alt="GitHub stats" />
     </td>
     <td valign="top" align="center">
-      <img width="400" src="https://raw.githubusercontent.com/BI11Y67/BI11Y67/main/profile/top-langs.svg" alt="Top languages" />
+      <img width="400" src="https://raw.githubusercontent.com/BI11Y67/BI11Y67/main/profile/top-langs.png" alt="Top languages" />
     </td>
   </tr>
 </table>
