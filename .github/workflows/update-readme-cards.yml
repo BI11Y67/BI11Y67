@@ -5,11 +5,13 @@ on:
     branches:
       - main
       - master
-    paths:
-      - ".github/workflows/update-readme-cards.yml"
   schedule:
     - cron: "0 3 * * *"
   workflow_dispatch:
+
+concurrency:
+  group: readme-stats-cards
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -35,20 +37,21 @@ jobs:
           path: profile/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Convert SVG to PNG (Inkscape — librsvg/rsvg often strips readme-stats text/icons/metrics)
+      - name: Convert SVG to PNG (Inkscape — preserves readme-stats text; librsvg/rsvg often drops it)
         env:
           DEBIAN_FRONTEND: noninteractive
         run: |
           sudo apt-get update
-          sudo apt-get install -y inkscape
-          # 2× README display width (400) so labels stay sharp after Camo/GitHub scaling
-          inkscape profile/stats.svg \
+          sudo apt-get install -y inkscape xvfb
+          mkdir -p profile
+          # xvfb: GTK/Inkscape on runners sometimes needs a virtual display even for export
+          xvfb-run -a inkscape profile/stats.svg \
             --export-type=png \
             --export-filename=profile/stats.png \
             --export-width=800 \
             --export-area-page \
             --export-overwrite
-          inkscape profile/top-langs.svg \
+          xvfb-run -a inkscape profile/top-langs.svg \
             --export-type=png \
             --export-filename=profile/top-langs.png \
             --export-width=800 \

@@ -8,7 +8,7 @@
 
 <img src="https://streak-stats.demolab.com/?user=BI11Y67&theme=dark&hide_border=true" alt="GitHub streak stats" />
 
-<!-- Stats row: SVG from Actions → PNG via Inkscape in workflow (rsvg/librsvg often renders empty bodies; GitHub also blocks many SVG <img>). Re-run workflow to refresh. -->
+<!-- Stats: real SVG from Actions → PNG via Inkscape (GitHub README often rejects SVG <img>; PNG from rsvg/librsvg looked empty while SVG in browser looked fine). PNG/SVG live under profile/ after the workflow runs—push triggers it on main/master. -->
 <table align="center">
   <tr>
     <td valign="top" align="center">
