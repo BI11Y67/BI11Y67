@@ -1,3 +1,4 @@
+# Profile README embeds PNGs; gaps vs opening profile/*.svg in a browser are usually runner font/rasterization—not wrong SVG on GitHub.
 name: Update README cards
 
 on:
@@ -37,26 +38,37 @@ jobs:
           path: profile/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Convert SVG to PNG (Inkscape — preserves readme-stats text; librsvg/rsvg often drops it)
+      - name: Rasterize SVG to PNG (headless Chromium — same text rendering as desktop browsers)
         env:
           DEBIAN_FRONTEND: noninteractive
         run: |
+          set -eux
           sudo apt-get update
-          sudo apt-get install -y inkscape xvfb
-          mkdir -p profile
-          # xvfb: GTK/Inkscape on runners sometimes needs a virtual display even for export
-          xvfb-run -a inkscape profile/stats.svg \
-            --export-type=png \
-            --export-filename=profile/stats.png \
-            --export-width=800 \
-            --export-area-page \
-            --export-overwrite
-          xvfb-run -a inkscape profile/top-langs.svg \
-            --export-type=png \
-            --export-filename=profile/top-langs.png \
-            --export-width=800 \
-            --export-area-page \
-            --export-overwrite
+          sudo apt-get install -y wget
+          wget -q -O /tmp/chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+          sudo dpkg -i /tmp/chrome.deb || sudo apt-get -f install -y
+          raster() {
+            local svg_rel="$1"
+            local png_rel="$2"
+            local abssvg outdir outbase
+            abssvg=$(readlink -f "$svg_rel")
+            outdir=$(readlink -f "$(dirname "$png_rel")")
+            outbase=$(basename "$png_rel")
+            mkdir -p "$outdir"
+            google-chrome-stable \
+              --headless=new \
+              --no-sandbox \
+              --disable-gpu \
+              --disable-dev-shm-usage \
+              --hide-scrollbars \
+              --force-device-scale-factor=2 \
+              --window-size=1000,2400 \
+              --virtual-time-budget=8000 \
+              --screenshot="${outdir}/${outbase}" \
+              "file://${abssvg}"
+          }
+          raster profile/stats.svg profile/stats.png
+          raster profile/top-langs.svg profile/top-langs.png
 
       - name: Commit cards
         run: |
