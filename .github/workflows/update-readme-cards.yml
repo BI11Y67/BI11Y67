@@ -35,12 +35,25 @@ jobs:
           path: profile/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Convert SVG to PNG (GitHub README often rejects SVG in <img>)
+      - name: Convert SVG to PNG (Inkscape — librsvg/rsvg often strips readme-stats text/icons/metrics)
+        env:
+          DEBIAN_FRONTEND: noninteractive
         run: |
           sudo apt-get update
-          sudo apt-get install -y librsvg2-bin
-          rsvg-convert --width 400 -o profile/stats.png profile/stats.svg
-          rsvg-convert --width 400 -o profile/top-langs.png profile/top-langs.svg
+          sudo apt-get install -y inkscape
+          # 2× README display width (400) so labels stay sharp after Camo/GitHub scaling
+          inkscape profile/stats.svg \
+            --export-type=png \
+            --export-filename=profile/stats.png \
+            --export-width=800 \
+            --export-area-page \
+            --export-overwrite
+          inkscape profile/top-langs.svg \
+            --export-type=png \
+            --export-filename=profile/top-langs.png \
+            --export-width=800 \
+            --export-area-page \
+            --export-overwrite
 
       - name: Commit cards
         run: |

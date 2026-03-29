@@ -8,7 +8,7 @@
 
 <img src="https://streak-stats.demolab.com/?user=BI11Y67&theme=dark&hide_border=true" alt="GitHub streak stats" />
 
-<!-- Stats row: cards built as SVG in Actions, exported to PNG for README (GitHub blocks many SVG <img> sources with "Invalid image source"). Sources: profile/*.svg; embeds: profile/*.png. Re-run workflow to refresh. -->
+<!-- Stats row: SVG from Actions → PNG via Inkscape in workflow (rsvg/librsvg often renders empty bodies; GitHub also blocks many SVG <img>). Re-run workflow to refresh. -->
 <table align="center">
   <tr>
     <td valign="top" align="center">
