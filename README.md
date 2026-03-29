@@ -11,10 +11,10 @@
 <table align="center">
   <tr>
     <td valign="top" align="center">
-      <img width="400" src="https://github-readme-stats.vercel.app/api?username=BI11Y67&show_icons=true&theme=dark&hide_border=true" alt="GitHub stats" />
+      <img width="400" src="https://github.com/BI11Y67/BI11Y67/blob/main/profile/stats.svg" alt="GitHub stats" />
     </td>
     <td valign="top" align="center">
-      <img width="400" src="https://github-readme-stats.vercel.app/api/top-langs/?username=BI11Y67&layout=compact&theme=dark&hide_border=true" alt="Top languages" />
+      <img width="400" src="https://github.com/BI11Y67/BI11Y67/blob/main/profile/top-langs.svg" alt="Top languages" />
     </td>
   </tr>
 </table>
